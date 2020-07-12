@@ -2,15 +2,11 @@ package main
 
 import "fmt"
 
-// if문 사용하기
-// if문 안에 변수 선언해서 핸들링 하기
-func canIDrink(age int) bool {
-	if koreanAge := age + 2; koreanAge < 18 {
-		return false
-	}
-	return true
-}
-
+//배열
+//값의 크기가 정해지지 않은 것
+//append 하는 것
 func main() {
-	fmt.Println(canIDrink(16))
+	names := []string{"nico", "lynn", "dal"}
+	names = append(names, "dsadwgwzcsd")
+	fmt.Println(names)
 }
