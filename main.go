@@ -2,11 +2,12 @@ package main
 
 import (
 	"fmt"
-
-	"github.com/cimyjh/gojobs/learngo/something"
 )
 
+func multiply(a int, b int) int {
+	return a * b
+}
+
 func main() {
-	fmt.Println("Hello world!!!!!!!!!")
-	something.SayHello()
+	fmt.Println(multiply(2, 2))
 }
