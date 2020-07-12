@@ -2,14 +2,18 @@ package main
 
 import "fmt"
 
-//map
+//Structs
+//데이터를 유연하게 사용하기
+type person struct {
+	name    string
+	age     int
+	favFood []string
+}
 
-//for문과 range 사용
 func main() {
-	nico := map[string]string{"name": "nico", "age": "12"}
-
-	for key, value := range nico {
-		fmt.Println(key, value)
-	}
+	favFood := []string{"asdsdfq", "ijoefiunjcsa"}
+	nico := person{name: "nico", age: 18, favFood: favFood}
+	fmt.Println(nico)
+	fmt.Println(nico.name)
 
 }
