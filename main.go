@@ -2,11 +2,14 @@ package main
 
 import "fmt"
 
-//배열
-//값의 크기가 정해지지 않은 것
-//append 하는 것
+//map
+
+//for문과 range 사용
 func main() {
-	names := []string{"nico", "lynn", "dal"}
-	names = append(names, "dsadwgwzcsd")
-	fmt.Println(names)
+	nico := map[string]string{"name": "nico", "age": "12"}
+
+	for key, value := range nico {
+		fmt.Println(key, value)
+	}
+
 }
