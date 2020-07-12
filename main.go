@@ -2,19 +2,15 @@ package main
 
 import "fmt"
 
-//for 문 사용하기
-func superAdd(numbers ...int) int {
-	total := 0
-	for _, number := range numbers {
-		total += number
+// if문 사용하기
+// if문 안에 변수 선언해서 핸들링 하기
+func canIDrink(age int) bool {
+	if koreanAge := age + 2; koreanAge < 18 {
+		return false
 	}
-
-	return total
+	return true
 }
 
 func main() {
-	result := superAdd(1, 2, 3, 4, 24, 235, 324, 23452, 2342345, 72427234)
-
-	fmt.Println(result)
-
+	fmt.Println(canIDrink(16))
 }
