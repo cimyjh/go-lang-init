@@ -1,6 +1,9 @@
 package accounts
 
-import "errors"
+import (
+	"errors"
+	"fmt"
+)
 
 // Account struct
 type Account struct {
@@ -35,4 +38,19 @@ func (a *Account) Withdraw(amount int) error {
 	}
 	a.balance -= amount
 	return nil
+}
+
+// ChangeOwner : 고객의 이름을 바꾸는 것
+func (a *Account) ChangeOwner(newOwner string) {
+	a.owner = newOwner
+}
+
+//Owner : 고객의 이름을 return 하는 것
+func (a Account) Owner() string {
+	return a.owner
+}
+
+//String : Java에서 출력값 지정해주듯 지정할 수 있다.
+func (a Account) String() string {
+	return fmt.Sprint(a.Owner(), "'s account.\nHas: ", a.Balance())
 }
