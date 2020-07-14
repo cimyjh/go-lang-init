@@ -1,19 +1,20 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
 
-//Structs
-//데이터를 유연하게 사용하기
-type person struct {
-	name    string
-	age     int
-	favFood []string
-}
+	"github.com/cimyjh/gojobs/git-init/accounts"
+)
 
 func main() {
-	favFood := []string{"asdsdfq", "ijoefiunjcsa"}
-	nico := person{name: "nico", age: 18, favFood: favFood}
-	fmt.Println(nico)
-	fmt.Println(nico.name)
+	account := accounts.NewAccount("Jae")
+	account.Deposit(10000)
+	fmt.Println(account.Balance())
 
+	//error 처리
+	err := account.Withdraw(20000)
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(account.Balance())
 }
